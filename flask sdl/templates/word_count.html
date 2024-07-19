@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Text analysis</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	{% if word_count == 1 %}
+	<h1>The word '{{ find_word }}' appeared once in the text.</h1>
+	{% elif word_count == 0 %}
+	<h1>The word '{{ find_word }}' did not appear in the text.</h1>
+	{% else %}
+	<h1>The word '{{ find_word }}' appeared {{ word_count }} times in the text.</h1>
+	{% endif %}
+</body>
+</html>

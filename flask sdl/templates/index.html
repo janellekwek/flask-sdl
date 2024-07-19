@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Text analysis</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<h1>Text Analysis</h1>
+	<hr>
+	<p>{{ text }}</p>
+	<hr>
+	<h2>Number of alphabetical characters: {{ num_letters }}</h2>
+	<h2>Character frequency:</h2>
+	<ul>
+		{% for char, freq in char_freq.items() %}		
+		<li>{{ char }}: {{ freq }}</li>
+		{% endfor %}
+	</ul>
+	
+</body>
+</html>
